@@ -1,0 +1,213 @@
+.poa {
+  position: absolute !important;
+}
+
+.por {
+  position: relative !important;
+}
+
+.pof {
+  position: fixed!important;
+}
+
+.fl {
+  float:left;
+}
+
+.fln {
+  float:none;
+}
+
+.fll {
+  float:left;
+}
+
+.flr {
+  float:right;
+}
+
+.cll {
+  clear:left;
+}
+
+.clr {
+  clear:right;
+}
+
+.clb {
+  clear:both;
+}
+
+.vh {
+  visibility:hidden;
+}
+
+.ovv {
+  overflow:visible;
+}
+
+.ovh {
+  overflow:hidden;
+}
+
+.ovs {
+  overflow:scroll;
+}
+
+.bxz {
+  box-sizing:border-box;
+}
+
+.vat {
+  vertical-align:top;
+}
+
+.vab {
+  vertical-align:bottom;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.bgszcv {
+  background-size:cover;
+}
+
+.t0 {
+  top: 0 !important;
+}
+
+.b0 {
+  bottom: 0 !important;
+}
+
+.l0 {
+  left: 0 !important;
+}
+
+.r0 {
+  right: 0 !important;
+}
+
+.di {
+  display: inline !important;
+}
+
+.db {
+  display: block !important;
+}
+
+.dib {
+  display: inline-block !important;
+}
+
+.dn {
+  display: none !important;
+}
+
+.dt {
+  display: table;
+}
+
+.dtbc {
+  display: table-cell;
+}
+
+.m-a {
+  margin: auto !important;
+}
+
+.h100p {
+  height: 100% !important;
+}
+
+.w100p {
+  width: 100% !important;
+}
+
+.hi {
+  height: initial !important;
+}
+
+.wi {
+  width: initial !important;
+}
+
+.lisn {
+	list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+
+$pixel-sizes: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 20 25 30 35 40 45 50 75 100 150 200 250 300;
+
+@each $size in $pixel-sizes {
+  .w#{$size} {
+    width: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .m#{$size} {
+    margin: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .mt#{$size} {
+    margin-top: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .mr#{$size} {
+    margin-right: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .mb#{$size} {
+    margin-bottom: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .ml#{$size} {
+    margin-left: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .p#{$size} {
+    padding: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pt#{$size} {
+    padding-top: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pr#{$size} {
+    padding-right: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pb#{$size} {
+    padding-bottom: #{$size}px !important;
+  }
+}
+
+@each $size in $pixel-sizes {
+  .pl#{$size} {
+    padding-left: #{$size}px !important;
+  }
+}

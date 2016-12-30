@@ -1,0 +1,48 @@
+/*********** EDIT COLORS ***********/
+
+$text_color: #333;
+$link_color: #333;
+$primary_color: #333;
+$highlight_color: #333;
+
+
+
+body {
+  color: $text_color;  
+}
+
+a {
+  color: $link_color;
+}
+
+.primary-text {
+  color: $primary_color !important;
+}
+
+.highlight-text {
+  color: $highlight_color !important;
+}
+
+.white-text {
+  color: #fff !important;
+}
+
+.black-text {
+  color: #000 !important;
+}
+
+.primary-text-bg {
+  background-color: $primary_color !important;
+}
+
+.highlight-text-bg {
+  background-color: $highlight_color !important;
+}
+
+.white-bg {
+  background-color: #fff !important;
+}
+
+.black-bg {
+  background-color: #000 !important;
+}
