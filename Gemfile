@@ -13,6 +13,7 @@ gem 'devise'
 gem 'watir'
 
 group :test do
+  gem 'faker'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'selenium-webdriver'
