@@ -1,5 +1,4 @@
 require 'watir'
-require 'pry'
 
 browser = Watir::Browser.new
 browser.goto 'http://www.co-optimus.com/games.php'
@@ -7,7 +6,6 @@ browser.goto 'http://www.co-optimus.com/games.php'
 browser.div(id: "system-modal").link(class: "close-reveal-modal").click
 browser.select_list(:id, "system").select("PC")
 browser.link(text: "Find Games").click
-binding.pry
 
 until browser.link(text: "Next").exists? == false
   rows = browser.trs(class: "result_row")
