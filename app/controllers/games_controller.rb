@@ -5,7 +5,9 @@ class GamesController < ApplicationController
     end
     
     @page_size = params[:page_size].to_i
-    @page_size = 25 if @page_size = 0
+    if @page_size = 0
+      @page_size = 25
+    end
     
     @page_number = params[:page_number].to_i
     @pagination_number = @page_number

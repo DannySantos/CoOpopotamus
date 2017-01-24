@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'watir'
+gem 'seed_dump'
 
 group :test do
   gem 'faker'
