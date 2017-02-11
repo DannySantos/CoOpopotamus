@@ -1,20 +1,27 @@
-<ul>
-  <%= render @games %>
-</ul>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>All Games</h1>
+    <p>Only games that you haven't marked will appear here. If you want to see games you have marked, go to My Games.</p>
+    
+    <ul class="lisn">
+      <%= render @games %>
+    </ul>
 
-<div class="pagination">
-  <% unless @first_page %>
-    <%= link_to "First", games_path(page_size: @page_size, page_number: 1) %>
-    <%= link_to "Prev", games_path(page_size: @page_size, page_number: @prev_page) %>
-  <% end %>
-  
-  <% 10.times do %>
-    <%= link_to @pagination_number, games_path(page_size: @page_size, page_number: @pagination_number) %>
-    <% @pagination_number += 1 %>
-  <% end %>
-  
-  <% unless @last_page %>
-    <%= link_to "Next", games_path(page_size: @page_size, page_number: @next_page) %>
-    <%= link_to "Last", games_path(page_size: @page_size, page_number: @last_page_number) %>
-  <% end %>
+    <div class="pagination">
+      <% unless @first_page %>
+        <%= link_to "First", games_path(page_size: @page_size, page_number: 1) %>
+        <%= link_to "Prev", games_path(page_size: @page_size, page_number: @prev_page) %>
+      <% end %>
+
+      <% 10.times do %>
+        <%= link_to @pagination_number, games_path(page_size: @page_size, page_number: @pagination_number) %>
+        <% @pagination_number += 1 %>
+      <% end %>
+
+      <% unless @last_page %>
+        <%= link_to "Next", games_path(page_size: @page_size, page_number: @next_page) %>
+        <%= link_to "Last", games_path(page_size: @page_size, page_number: @last_page_number) %>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -1,3 +1,17 @@
-<li class="game">
-  <%= game.title %>
+<li class="game row unmarked" id="game_<%= game.id %>">
+  <div class="col-sm-3">
+    <%= image_tag "ff7", class: "w100p" %>
+  </div>
+  
+  <div class="col-sm-9">
+    <%= game.title %>
+    
+    <%= form_for(@marked_game, remote: true) do |f| %>
+      <%= f.hidden_field :game_id, value: game.id %>
+      <%= f.submit "Mark as Played", id: "#{game.id}_played" %>
+      <%= f.submit "Mark as Must Play", id: "#{game.id}_must_play" %>
+    <% end %>
+  </div>
+  
+  <div class="clb"></div>
 </li>

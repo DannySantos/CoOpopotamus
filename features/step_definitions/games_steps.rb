@@ -22,6 +22,14 @@ Given(/^they are on the unmarked games index page$/) do
   visit games_path(page_size: 25, page_number: 1)
 end
 
+When(/^they mark a game as played$/) do
+  find("input", id: "#{Game.first.id}_played").click
+end
+
+Then(/^the game is marked as played$/) do
+  expect(MarkedGame.where(user_id: @user.id, game_id: Game.first.id).first.status).to eq("played")
+end
+
 Then(/^they see a list of unmarked games$/) do
   expect(page).to have_selector('li.game', count: 25)
 end

@@ -1,0 +1,13 @@
+var content = 
+  "<div class='col-sm-6'>" + 
+    "<span><%= @marked_game.game.title %></span>" + 
+  "</div>" + 
+    
+  "<div class='col-sm-6 tar'>" + 
+    "<span><%= @marked_game.status %></span>" +
+  "</div>";
+
+$('#game_<%= @marked_game.game.id %>').empty()
+$('#game_<%= @marked_game.game.id %>').html(content)
+$('#game_<%= @marked_game.game.id %>').removeClass("unmarked")
+$('#game_<%= @marked_game.game.id %>').addClass("marked")

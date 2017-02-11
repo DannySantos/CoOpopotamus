@@ -2,7 +2,7 @@ Given(/^they are on the registration page$/) do
   visit new_user_registration_path
 end
 
-Given(/^a User has previously registered$/) do
+Given(/^a user has previously registered$/) do
   @user = User.create!(
     {
       email: "test@test.com",
@@ -33,7 +33,7 @@ Then(/^they are logged in$/) do
   expect(page).to have_content("Signed in successfully.")
 end
 
-Then(/^a User should be created$/) do
+Then(/^a user should be created$/) do
   expect(User.last.email).to eq('test@test.com')
 end
 

@@ -5,7 +5,7 @@ class GamesController < ApplicationController
     end
     
     @page_size = params[:page_size].to_i
-    if @page_size = 0
+    if @page_size == 0
       @page_size = 25
     end
     
@@ -26,6 +26,8 @@ class GamesController < ApplicationController
     unless @posts.nil?
       @last_page = @games.count < @page_size + 1
     end
+    
+    @marked_game = MarkedGame.new
   end
   
   def get_offset(page_number, page_size)
