@@ -2,5 +2,5 @@ class MarkedGame < ApplicationRecord
   belongs_to :user
   belongs_to :game
   
-  enum status: ["Played", "Must Play"]
+  enum status: ["Played", "Must Play", "May Play", "Playing", "Not Interested"]
 end

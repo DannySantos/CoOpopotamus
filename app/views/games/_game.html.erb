@@ -8,8 +8,11 @@
     
     <%= form_for(@marked_game, remote: true) do |f| %>
       <%= f.hidden_field :game_id, value: game.id %>
-      <%= f.submit "Mark as Played", id: "#{game.id}_played" %>
-      <%= f.submit "Mark as Must Play", id: "#{game.id}_must_play" %>
+      <%= f.submit "May Play", id: "#{game.id}_may_play" %>
+      <%= f.submit "Must Play", id: "#{game.id}_must_play" %>
+      <%= f.submit "Played", id: "#{game.id}_played" %>
+      <%= f.submit "Playing", id: "#{game.id}_playing" %>
+      <%= f.submit "Not Interested", id: "#{game.id}_not_interested" %>
     <% end %>
   </div>
   
