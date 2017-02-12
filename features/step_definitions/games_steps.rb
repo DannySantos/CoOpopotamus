@@ -38,7 +38,6 @@ end
 
 When(/^they visit their games list$/) do
   visit marked_games_path
->>>>>>> master
 end
 
 When(/^they mark a game as played$/) do
