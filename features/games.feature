@@ -21,11 +21,10 @@ Feature: Games
     When they mark a game as played
     Then the game is marked as played
 
-  @wip
-  Scenario: A user doesn't see marked games on the unmarked games list
+  Scenario: A user views their games list
     Given a user has previously registered
       And they have signed in previously
       And there are some games
-      And they are on the unmarked games index page
-      And they have previously marked a game
-    Then they should only see unmarked games
+      And there are some games marked by the user
+    When they visit their games list
+    Then they should only see games they have marked
