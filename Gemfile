@@ -12,7 +12,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'watir'
 gem 'seed_dump'
-gem 'rails_12factor', group: :production
 
 group :test do
   gem 'faker'

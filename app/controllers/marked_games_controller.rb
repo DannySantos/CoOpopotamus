@@ -1,4 +1,8 @@
 class MarkedGamesController < ApplicationController
+  def index
+    @marked_games = current_user.marked_games
+  end
+  
   def create
     @marked_game = MarkedGame.new(marked_games_params)
     @marked_game.user_id = current_user.id

@@ -22,8 +22,34 @@ Given(/^they are on the unmarked games index page$/) do
   visit games_path(page_size: 25, page_number: 1)
 end
 
+Given(/^there are some games marked by the user$/) do
+  @marked_game_2 = MarkedGame.create!(
+    user_id: @user.id,
+    game_id: Game.first.id,
+    status: 0
+  )
+  
+  @marked_game_3 = MarkedGame.create!(
+    user_id: @user.id,
+    game_id: Game.last.id,
+    status: 1
+  )
+end
+
+When(/^they visit their games list$/) do
+  visit marked_games_path
+end
+
 When(/^they mark a game as played$/) do
   find("input", id: "#{Game.first.id}_played").click
+end
+
+Then(/^they should only see games they have marked$/) do
+  expect(page).to have_content(@marked_game_2.game.title)
+  expect(page).to have_content(@marked_game_3.game.title)
+  expect(page).not_to have_content(Game.second.title)
+  expect(page).not_to have_content(Game.third.title)
+  
 end
 
 Then(/^the game is marked as played$/) do
