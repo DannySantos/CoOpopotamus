@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'watir'
 gem 'seed_dump'
+gem 'will_paginate'
 
 group :test do
   gem 'faker'
