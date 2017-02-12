@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "application#index"
+  root to: "games#index"
   
   resources :games, only: [:index]
-  resources :marked_games, only: [:create]
+  resources :marked_games, only: [:index, :create]
 end
