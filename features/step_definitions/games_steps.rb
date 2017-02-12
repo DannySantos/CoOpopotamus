@@ -81,7 +81,3 @@ end
 Then(/^they see page two of unmarked games$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
-
-Then(/^they should only see unmarked games$/) do
-  expect(page).not_to have_css("input", id: "#{Game.first.id}_played")
-end
