@@ -13,9 +13,9 @@ Feature: Games
     Then they see page two of unmarked games
       And they see the second page pagination links
       
-  @wip
   Scenario: A user marks a game as played
     Given a user has previously registered
+      And they have signed in previously
       And there are some games
       And they are on the unmarked games index page
     When they mark a game as played
