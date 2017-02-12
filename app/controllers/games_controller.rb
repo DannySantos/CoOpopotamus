@@ -21,7 +21,8 @@ class GamesController < ApplicationController
     
     @last_page_number = (Game.count.to_f / @page_size).ceil
     
-    @games = Game.limit(@page_size).offset(get_offset(@page_number, @page_size))
+    @games = Game.all - current_user.games
+    # @games = games.limit(@page_size).offset(get_offset(@page_number, @page_size))
 
     unless @posts.nil?
       @last_page = @games.count < @page_size + 1

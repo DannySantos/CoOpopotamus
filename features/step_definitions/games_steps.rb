@@ -22,6 +22,10 @@ Given(/^they are on the unmarked games index page$/) do
   visit games_path(page_size: 25, page_number: 1)
 end
 
+Given(/^they have previously marked a game$/) do
+  MarkedGame.create!(user_id: @user.id, game_id: Game.first.id)
+end
+
 When(/^they mark a game as played$/) do
   find("input", id: "#{Game.first.id}_played").click
 end
@@ -54,4 +58,8 @@ end
 
 Then(/^they see page two of unmarked games$/) do
   pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^they should only see unmarked games$/) do
+  expect(page).not_to have_css("input", id: "#{Game.first.id}_played")
 end
